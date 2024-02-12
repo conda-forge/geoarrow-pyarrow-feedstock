@@ -1,5 +1,5 @@
 {% set name = "geoarrow-pyarrow" %}
-{% set version = "0.1.1" %}
+{% set version = "0.1.2" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/geoarrow-pyarrow-{{ version }}.tar.gz
-  sha256: dec429fac397f6d3616e224b9cae6229dfcc1be3c279bbe304da55bbd26e0407
+  sha256: 318b3bd42e865b7b2cd7bcb0947c4053f07be15296153c297e94150a4be7357e
 
 build:
   number: 0
@@ -23,6 +23,7 @@ requirements:
     - geoarrow-c
     - pyarrow
     - python >=3.8
+    - pyarrow-hotfix
 
 test:
   imports:
