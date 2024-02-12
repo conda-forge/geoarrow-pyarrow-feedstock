@@ -23,6 +23,7 @@ requirements:
     - geoarrow-c
     - pyarrow
     - python >=3.8
+    - pyarrow-hotfix
 
 test:
   imports:
