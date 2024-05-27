@@ -34,7 +34,7 @@ test:
     - pip
 
 about:
-  home: https://github.com/geoarrow/geoarrow-pyarrow
+  home: https://github.com/geoarrow/geoarrow-python
   summary: GeoArrow integration with pyarrow and pyarrow-based libraries
   license: Apache-2.0
   license_file: LICENSE
