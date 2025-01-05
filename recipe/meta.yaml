@@ -7,22 +7,22 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/geoarrow-pyarrow-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/geoarrow-pyarrow-{{ version }}.tar.gz
   sha256: 318b3bd42e865b7b2cd7bcb0947c4053f07be15296153c297e94150a4be7357e
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
     - pip
-    - python >=3.8
+    - python {{ python_min }}
   run:
     - geoarrow-c
     - pyarrow
-    - python >=3.8
+    - python >={{ python_min }}
     - pyarrow-hotfix
 
 test:
@@ -32,6 +32,7 @@ test:
     - pip check
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   home: https://github.com/geoarrow/geoarrow-python
