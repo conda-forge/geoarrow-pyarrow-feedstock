@@ -19,11 +19,12 @@ requirements:
   host:
     - pip
     - python {{ python_min }}
+    - setuptools >=61.0.0
   run:
-    - geoarrow-c
+    - geoarrow-c >=0.3.0
+    - geoarrow-types >=0.3.0
     - pyarrow
     - python >={{ python_min }}
-    - pyarrow-hotfix
 
 test:
   imports:
