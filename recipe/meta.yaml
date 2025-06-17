@@ -11,15 +11,16 @@ source:
   sha256: 5c981f5cae26fa6cdfb6f9b83fb490d36bf0fe6f6fa360c4c8983e0a8a457926
 
 build:
-  number: 0
+  number: 1
   noarch: python
-  script: {{ PYTHON }} -m pip install . -vv
+  script: {{ PYTHON }} -m pip install . -vv --no-build-isolation --no-deps
 
 requirements:
   host:
     - pip
     - python {{ python_min }}
     - setuptools >=61.0.0
+    - setuptools-scm
   run:
     - geoarrow-c >=0.3.0
     - geoarrow-types >=0.3.0
